@@ -3,12 +3,12 @@ public class Program2 {
         int a = 4;
         int b = 5;
         System.out.println("Задание 2:");
-        System.out.println("Значение переменной а= " + a);
-        System.out.println("Значение переменной b= " + b);
-        a = a + b;
+        System.out.printf("Значение переменной а = %s", a + "\n");
+        System.out.printf("Значение переменной b = %s", b + "\n");
+        a += b;
         b = a - b;
-        a = a - b;
-        System.out.println("Новое значение переменной а= " + a);
-        System.out.println("Новое значение переменной b= " + b);
+        a -= b;
+        System.out.printf("Новое значение переменной а = %s", a + "\n");
+        System.out.printf("Новое значение переменной b = %s", b + "\n");
     }
 }

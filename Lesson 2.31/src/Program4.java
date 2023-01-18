@@ -3,8 +3,11 @@ public class Program4 {
         double P = Double.parseDouble(args[0]);
         double r = Double.parseDouble(args[1]);
         int t = Integer.parseInt(args[2]);
-        double summa = (P * Math.exp(r*t));
-        System.out.println("Задание 4:" +"\n" + "Будущая сумма размещения денег под процент " + r + " годовых через "
-                + t + " лет = " + summa);
+        double summa = (P * Math.exp(r/100*t));
+        System.out.println("Задание 4:");
+        System.out.printf("Дано: P = %s, ", P);
+        System.out.printf("r = %s, ", r);
+        System.out.printf("t = %s ", t + "\n");
+        System.out.println(summa);
     }
 }

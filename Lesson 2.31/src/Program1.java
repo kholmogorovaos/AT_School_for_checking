@@ -4,11 +4,11 @@ public class Program1 {
         int b = 5;
         int change = a;
         System.out.println("Задание 1:");
-        System.out.println("Значение переменной а= " + a);
-        System.out.println("Значение переменной b=" + b);
+        System.out.println(String.format("Значение переменной а = %s", a));
+        System.out.println(String.format("Значение переменной b = %s", b));
         a = b;
         b = change;
-        System.out.println("Новое значение переменной а= " + a);
-        System.out.println("Новое значение переменной b= " + b);
+        System.out.println(String.format("Новое значение а = %s", a));
+        System.out.println(String.format("Новое значение b = %s", b));
     }
 }
