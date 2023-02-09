@@ -1,23 +1,33 @@
 import java.util.Random;
 public class Task4 {
-    public static void main(String[] args) {
-        int n = 10;
-        Task4 main = new Task4();
-        do System.out.println(main.nextInt(n));
-        while (main.isPrime(main.nextInt(n)) == true);
-        System.out.println("Сгенерированное число составное");
+    private final int n;
+    private final Random random = new Random();
+    public Task4(int n) {
+        this.n = n;
     }
     public boolean isPrime(int x) {
-        boolean isPrime = true;
-        for (int i = 2; i <= x/2; i++) {
+        if (x <= 1) {
+            return false;
+        }
+        for (int i = 2; i < x; i++) {
             if (x % i == 0) {
-                isPrime = false;
-                break;
+                return false;
             }
         }
-        return isPrime;
+        return true;
     }
     public int nextInt(int x) {
-           return new Random().nextInt(x + 1);
+        return random.nextInt(x);
+    }
+    public int generate() {
+        int number;
+        do {
+            number = nextInt(n - 1) + 1;
+        } while (!isPrime(number));
+        return number;
+    }
+    public static void main(String[] args) {
+        Task4 generator = new Task4(10);
+        System.out.println(generator.generate());
     }
 }

@@ -26,20 +26,16 @@ public class Calculator {
         }
 
     public static int add(int x, int y){
-           int result = x + y;
-        return result;
+           return x + y;
     }
     public static int sub(int x, int y){
-            int result = x - y;
-        return result;
+        return x - y;
     }
     public static int mult(int x, int y) {
-            int result = x * y;
-        return result;
+        return x * y;
     }
     public static int divide(int x, int y) {
-            int result = x / y;
-        return result;
+        return x / y;
     }
 }
 
