@@ -6,7 +6,6 @@ public class Task6 {
         } else {
             Timer timer = new Timer(seconds);
             timer.start();
-           // timer.waitSecond();
         }
     }
 }
