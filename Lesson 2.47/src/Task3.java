@@ -12,7 +12,7 @@ public class Task3 {
             int matrix[][] = new int[n1][col];
             int value = 1;
             for (int i = 0; i < n1; ++i) {
-                if (i % 2 == 0) {
+                if (i % 2 == 0)  {
                     for (int j = 0; j < col; ++j) {
                         matrix[i][j] = value;
                         value++;
@@ -29,10 +29,9 @@ public class Task3 {
                 for (int j = 0; j < matrix[i].length; ++j) {
                     if (matrix[i][j] <= n) {
                         System.out.printf(matrix[i][j] + " ");
-                    }
-                }
-                    System.out.println();
+                    } else
+                        System.out.printf(" ".repeat(Integer.toString(matrix[i][j]).length() + 1));
+                } System.out.println();
             }
-
         }
 }
