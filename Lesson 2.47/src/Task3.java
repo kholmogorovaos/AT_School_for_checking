@@ -8,7 +8,7 @@ public class Task3 {
         } else System.out.println("Ошибка: неверно введены значения");
     }
         public void snakePrint(int n, int col) {
-            int n1 = n/col; //+ (n % col == 0 ? 0 : 1);
+            int n1 = n/col + (n % col == 0 ? 0 : 1);
             int matrix[][] = new int[n1][col];
             int value = 1;
             for (int i = 0; i < n1; ++i) {
@@ -25,10 +25,14 @@ public class Task3 {
                     }
                 }
             }
-            for (int i = 0; i < n1; ++i) {
-                for (int j = 0; j < col; ++j) {
+            for (int i = 0; i < matrix.length; ++i) {
+                for (int j = 0; j < matrix[i].length; ++j) {
+                    if (matrix[i][j] <= n) {
                         System.out.printf(matrix[i][j] + " ");
-                    } System.out.println();
+                    }
+                }
+                    System.out.println();
             }
+
         }
 }
